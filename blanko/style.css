@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 100%;
+    width: 1440px;
+    margin: 0 auto;
+
+    header {
+        background-color: black;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        padding-top: 10px;
+
+
+        nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
+
+            button {
+                border: none;
+                background-color: #FF7143;
+                padding: 10px 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,242 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 100%;
+    width: 1140px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 35px;
+    background-color: #E1EDE6;
+
+    nav {
+        display: flex;
+        gap: 58px;
+        align-items: center;
+
+        a {
+            text-decoration: none;
+            color: #2C2D35;
+        }
+    }
+}
+
+
+.new-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        h1 {
+            font-size: 60px;
+            font-weight: 100;
+            color: #2C2D35;
+            font-family: sans-serif;
+
+            span {
+                color: rgb(95, 205, 154);
+            }
+        }
+
+        p {
+            color: #86928B;
+        }
+
+        button {
+            width: 200px;
+            background-color: transparent;
+            padding: 20px  30px;
+            border: solid 1px #598D66;
+            margin-top: 27px;
+        }
+
+        button:hover {
+            background-color: aqua;
+            transition: 1s;
+            color: white;
+        }
+    }
+}
+
+.all {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 30px;
+
+    .image {
+        display: flex;
+        gap: 52px;
+        align-items: center;
+
+        .green {
+                background-color: #376B44;
+                color: white;
+                border: none;
+        }
+
+        button {
+            background-color: #D4E8D9;
+            color: #2C2D35;
+            padding: 10px 30px;
+            border-radius: 20px;
+            border: none;
+        }
+    }
+}
+
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    
+    .card {
+        background-color: #E1EDE6;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+        
+        p {
+            color: #86928B;
+        }
+        
+        .green2 {
+            color: #598D66;
+        }
+
+        button {
+            background-color: transparent;
+            padding: 20px  30px;
+            border: solid 1px #598D66;
+            margin-top: 27px;
+        }
+
+    }
+}
+
+.big-image {
+    background-image: url(./assets/svg/back.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 55vh;
+    margin-top: 40px;
+
+    .text {
+        color: white;
+        padding-left: 70px;
+        background-color: rgba(42, 40, 40, 0.7);
+        border-radius: 20px;
+        width: 540px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        height: 400px;
+
+        .icons {
+            display: flex;
+        }
+
+        button {
+            width: 250px;
+            padding: 20px 30px;
+            border: none;
+        }
+    } 
+}
+
+.last-block {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .images {
+            display: flex;
+            gap: 30px;
+        }
+    }
+}
+
+footer {
+    background-color: #E1EDE6;
+    padding: 5px;
+    margin-top: 40px;
+    
+    .container {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 50px;
+
+        .links {
+            display: flex;
+            gap: 60px;
+
+            .first {
+                display: flex;
+                flex-direction: column;
+                gap: 21px;
+
+                span {
+                    color: #86928B;
+                }
+            }
+
+            .second {
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+
+                a {
+                    text-decoration: none;
+                    color: #86928B;
+                }
+
+                .black {
+                    color: black;
+                }
+            }
+        }
+
+        .icons {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+
+            .images {
+                display: flex;
+                gap: 30px;
+            }
+
+            .text {
+                display: flex;
+                flex-direction: column;
+
+                a {
+                    text-decoration: none;
+                    color: #86928B;
+                }
+            }
+        }
+    }
+}

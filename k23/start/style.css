@@ -1,0 +1,15 @@
+h1 {
+    color: red;
+    font-size: 90px;
+}
+
+img {
+    width: 400px;
+    border-radius: 1000px;
+    border: solid 10px yellow   ; 
+}
+
+p {
+    font-weight: 900;
+    font-size: 80px;
+}

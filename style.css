@@ -1,0 +1,107 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+
+header nav {
+    display: flex;
+    gap: 50px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #161616;
+}
+
+.new-block {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.green-block {
+    background-color: #154444;
+    width: 800px;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.text h1 {
+    color: white;
+    font-size: 50px;
+    font-family: sans-serif;
+}
+
+button {
+    max-width: 170px;
+    padding: 12px 17px;
+    color: #154444;
+}
+
+.text p {
+    color: white;
+}
+
+.logotips p {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.companies {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 50px;
+}
+
+.logotips {
+    margin-top: 50px;
+}
+
+header .icons {
+    display: flex;
+    gap: 30px;
+}
+
+.second-block {
+    display: flex;
+    justify-content: center;
+    gap: 135px;
+    margin-top: 50px;
+    align-items: center;
+}
+
+.icon {
+    display: flex;
+    gap: 28px;
+}
+
+.text1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.text2 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}

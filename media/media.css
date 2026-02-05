@@ -1,0 +1,38 @@
+.box {
+    display: flex;
+    gap: 40px;
+
+    .box1 {
+        width: 200px;
+        height: 200px;
+        background-color: aquamarine;
+    }
+
+    .box2 {
+        width: 200px;
+        height: 200px;
+        background-color: aquamarine;
+    }
+
+    .box3 {
+        width: 200px;
+        height: 200px;
+        background-color: aquamarine;
+    }
+}
+
+@media (max-width:1000px) {
+    .box {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+/* 
+@media (max-width:300px) {
+    .box {
+        display: block;
+    }
+}      
+ */

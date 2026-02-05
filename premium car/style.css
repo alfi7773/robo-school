@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ 
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    .container {
+        width: 100%;
+        display: flex;
+        background-color: black;
+        justify-content: space-between;
+
+        nav {
+            display: flex;
+            gap: 20px;
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}
+
+.container {
+    width: 1200px;
+
+    section {
+        display: flex;
+        gap: 20px;
+
+        .part-1 {
+            background-image: url(./assets/car.svg);
+            color: white;
+            width: 370px;
+            height: 560px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            align-content: end;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+        .part-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+
+            .car1 {
+                background-image: url(./assets/car2.svg);
+                color: white;
+                width: 392px;
+                height: 265px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                align-content: end;
+                padding: 10px;
+                border-radius: 10px;
+                font-size: 14px;
+                font-weight: 700;
+
+            }
+
+            .car2 {
+                background-image: url(./assets/car3.svg);
+                color: white;
+                width: 392px;
+                height: 265px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                align-content: end;
+                padding: 10px;
+                border-radius: 10px;
+                font-size: 14px;
+                font-weight: 700;
+
+            }
+
+            .car3 {
+                background-image: url(./assets/car4.svg);
+                color: white;
+                width: 392px;
+                height: 265px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                align-content: end;
+                padding: 10px;
+                border-radius: 10px;
+                font-size: 14px;
+                font-weight: 700;
+
+            }
+
+            .car4 {
+                background-image: url(./assets/car5.svg);
+                color: white;
+                width: 392px;
+                height: 265px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                align-content: end;
+                padding: 10px;
+                border-radius: 10px;
+                font-size: 14px;
+                font-weight: 700;
+
+            }
+        }
+    }
+}

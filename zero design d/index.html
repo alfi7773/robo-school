@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero Design - Design Addicted</title>
+    <style>
+        /* Базовые стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        body {
+            color: var(--primary-black);
+            background-color: var(--primary-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            padding: 20px 0;
+            <!-- position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: var(--primary-white);
+            z-index: 1000;
+            border-bottom: 1px solid var(--gray-medium); -->
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--primary-black);
+        }
+
+        .logo sup {
+            font-size: 12px;
+            vertical-align: super;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--primary-black);
+            font-weight: 500;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Герой секция */
+        .hero {
+            padding: 180px 0 100px;
+            text-align: center;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ed 100%);
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background-color: var(--primary-black);
+            color: var(--primary-white);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 {
+            font-size: 72px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-size: 24px;
+            color: var(--gray-dark);
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-description {
+            font-size: 18px;
+            color: var(--gray-dark);
+            max-width: 500px;
+            margin: 0 auto 50px;
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 80px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 14px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-black);
+            color: var(--primary-white);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-black);
+            border: 1px solid var(--primary-black);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .feature-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .feature-description {
+            font-size: 14px;
+            color: var(--gray-dark);
+        }
+
+        /* Секция о продукте */
+        .product-section {
+            padding: 100px 0;
+            background-color: var(--primary-white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .section-description {
+            font-size: 18px;
+            color: var(--gray-dark);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+
+        .product-card {
+            background-color: var(--gray-light);
+            border-radius: 12px;
+            padding: 40px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-card h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .product-card p {
+            color: var(--gray-dark);
+            margin-bottom: 20px;
+        }
+
+        .product-link {
+            color: var(--primary-black);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .product-link::after {
+            content: "→";
+            transition: transform 0.3s;
+        }
+
+        .product-link:hover::after {
+            transform: translateX(5px);
+        }
+
+        /* Секция страниц */
+        .pages-section {
+            padding: 80px 0;
+            background-color: var(--gray-light);
+        }
+
+        .pages-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .page-card {
+            background-color: var(--primary-white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .page-preview {
+            height: 200px;
+            background-color: var(--gray-medium);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray-dark);
+        }
+
+        .page-info {
+            padding: 20px;
+        }
+
+        .page-info h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .page-info p {
+            font-size: 14px;
+            color: var(--gray-dark);
+        }
+
+        /* Подвал */
+        footer {
+            background-color: var(--primary-black);
+            color: var(--primary-white);
+            padding: 80px 0 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column ul li a {
+            color: var(--gray-dark);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--primary-white);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+            color: var(--gray-dark);
+        }
+
+        .footer-credits {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-credits a {
+            color: var(--gray-dark);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-credits a:hover {
+            color: var(--primary-white);
+        }
+
+        /* Адаптивность */
+        @media (max-width: 992px) {
+            .features-grid,
+            .pages-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 48px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul {
+                display: none;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .features-grid,
+            .pages-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero {
+                padding: 150px 0 80px;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .section-title {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">zer<sup>®</sup></a>
+                <nav>
+                    <ul>
+                        <li><a href="#">Landing</a></li>
+                        <li><a href="#">Company</a></li>
+                        <li><a href="#">CMS Pages</a></li>
+                        <li><a href="#">Utility</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Герой секция -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">DESIGN ADDICTED</div>
+            <h1>DESIGN</h1>
+            <div class="hero-subtitle">A stylish UI Kit for all web creatives</div>
+            <p class="hero-description">
+                Zero is a Webflow Ecommerce and CMS UI kit including several carefully designed page layouts.
+            </p>
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-primary">Purchase Zero</a>
+                <a href="#" class="btn btn-secondary">Discover Zero</a>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <div class="feature-title">SMOOTH INTERACTIONS</div>
+                    <div class="feature-description">Beautiful animations and transitions</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📄</div>
+                    <div class="feature-title">MANY PAGE LAYOUTS</div>
+                    <div class="feature-description">Multiple designs for every need</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📱</div>
+                    <div class="feature-title">FULLY RESPONSIVE</div>
+                    <div class="feature-description">Perfect on all devices</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🎨</div>
+                    <div class="feature-title">FAST CUSTOMIZATION</div>
+                    <div class="feature-description">Easy to customize and adapt</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция о продукте -->
+    <section class="product-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Zero Design</h2>
+                <p class="section-description">
+                    Includes a total of 10 static pages, divided like this: 4 Landing pages, 2 About pages, 
+                    2 Contact page, 1 Team page, 1 FAQ page. In addition to these, there are Webflow CMS 
+                    driven pages: Blog (in 2 variations), Shop (in 2 variations), Works and Careers. 
+                    All with their respective single pages!
+                </p>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div>
+                        <h3>Landing Pages</h3>
+                        <p>Beautiful landing page designs for various purposes and industries.</p>
+                    </div>
+                    <a href="#" class="product-link">View all landing pages</a>
+                </div>
+                <div class="product-card">
+                    <div>
+                        <h3>CMS Pages</h3>
+                        <p>Dynamic content pages powered by Webflow CMS.</p>
+                    </div>
+                    <a href="#" class="product-link">Explore CMS pages</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция страниц -->
+    <section class="pages-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Page Examples</h2>
+                <p class="section-description">
+                    Explore the variety of page layouts included in Zero Design UI Kit
+                </p>
+            </div>
+            <div class="pages-grid">
+                <div class="page-card">
+                    <div class="page-preview">LANDING 1</div>
+                    <div class="page-info">
+                        <h4>Landing Page 1</h4>
+                        <p>Modern business landing</p>
+                    </div>
+                </div>
+                <div class="page-card">
+                    <div class="page-preview">LANDING 2</div>
+                    <div class="page-info">
+                        <h4>Landing Page 2</h4>
+                        <p>Creative agency layout</p>
+                    </div>
+                </div>
+                <div class="page-card">
+                    <div class="page-preview">ABOUT 1</div>
+                    <div class="page-info">
+                        <h4>About Page 1</h4>
+                        <p>Company introduction</p>
+                    </div>
+                </div>
+                <div class="page-card">
+                    <div class="page-preview">CONTACT 1</div>
+                    <div class="page-info">
+                        <h4>Contact Page 1</h4>
+                        <p>Get in touch form</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Zero Design</h3>
+                    <p style="color: #8e8e93; margin-bottom: 20px; font-size: 14px;">
+                        A stylish UI Kit for all web creatives. Built with Webflow.
+                    </p>
+                </div>
+                <div class="footer-column">
+                    <h3>Landing Pages</h3>
+                    <ul>
+                        <li><a href="#">Landing 1</a></li>
+                        <li><a href="#">Landing 2</a></li>
+                        <li><a href="#">Landing 3</a></li>
+                        <li><a href="#">Landing 4</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>CMS Pages</h3>
+                    <ul>
+                        <li><a href="#">Blog 1</a></li>
+                        <li><a href="#">Blog 3</a></li>
+                        <li><a href="#">Shop 1</a></li>
+                        <li><a href="#">Shop 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Utility</h3>
+                    <ul>
+                        <li><a href="#">Coming Soon</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms And Conditions</a></li>
+                        <li><a href="#">404 Page</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>POWERED BY WEBFLOW</div>
+                <div class="footer-credits">
+                    <a href="#">CREATED BY UDESLY</a>
+                    <a href="#">Licensing</a>
+                    <a href="#">Style Guide</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

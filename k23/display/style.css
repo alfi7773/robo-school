@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+}
+
+.box1, .box2, .box3, .box4 {
+    width: 200px;
+    height: 200px;
+    background-color: chocolate;
+    text-align: center;
+}
+
+.box2 {
+    height: 400px;
+}

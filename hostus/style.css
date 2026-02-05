@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 100%;
+    width: 1440px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 40px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #414141;
+}
+
+header nav {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+header button {
+    background-color: #DE3C3C;
+    border: none;
+    padding: 10px 30px;
+    color: white;
+    border-radius: 5px;
+}
+
+
+.new-block {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    align-items: center;
+    padding-top: 70px;
+
+    button {
+        background-color: #DE3C3C;
+        border: none;
+        padding: 10px 30px;
+        color: white;
+        border-radius: 5px;
+    }
+    
+}
+
+
+
+
+.new-block .text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.new-block .text p {
+    color: #C5C5C5;
+}
+
+.second-block {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    gap: 150px;
+}
+
+.card1,
+.card2,
+.card4 {
+    width: 450px;
+    height: 220px;
+    background-color: #c5c5c500;
+    padding-left: 20px;
+    align-content: center;
+    border: solid 1px rgb(128, 128, 128, 0.3);
+    border-radius: 10px;
+    color: #C5C5C5;
+}
+
+.card3 {
+    width: 450px;
+    height: 220px;
+    padding: 30px;
+    align-content: center;
+    background-image: url(./images/Oval.png);
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+
+    img {
+        width: 60px;
+    }
+} 
+
+.first-cart {
+    display: flex;
+    flex-direction: column;
+    gap: 130px;
+}
+
+.second-cart {
+    display: flex;
+    flex-direction: column;
+    gap: 130px;
+    padding-top: 100px;
+}
+
+.big-img {
+    background-image: url();
+}

@@ -1,0 +1,15 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.news {
+    display: grid;
+    grid-template-columns: repeat(2, 500px);
+    gap: 50px;
+}
+
+img {
+    width: 500px;
+}
